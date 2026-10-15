@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #120006, #3b0015, #000000);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 420px;
+            padding: 35px 25px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        h1 {
+            font-size: 32px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 12px;
+            border: none;
+            border-radius: 12px;
+            background: #ff174f;
+            color: white;
+            font-size: 17px;
+        }
+
+        #error {
+            color: #ff6b8a;
+            display: none;
+        }
+
+        #lovePage {
+            display: none;
+        }
+
+        .heart {
+            font-size: 55px;
+        }
+
+        #lovePage img {
+            width: 100%;
+            max-width: 350px;
+            margin: 12px auto;
+            display: block;
+            border-radius: 18px;
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" id="loginPage">
+
+        <div class="heart">❤️</div>
+
+        <h1>Rady's Surprise</h1>
+
+        <p>Enter your username and password</p>
+
+        <input type="text" id="username" placeholder="Username">
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button onclick="login()">Enter ❤️</button>
+
+        <p id="error">Wrong username or password 💔</p>
+
+    </div>
+
+
+    <div class="container" id="lovePage">
+
+        <div class="heart">❤️</div>
+
+        <h1>Rady</h1>
+
+        <p>
+            💗💗💗حقك عليا يا صاحبى <br><br>
+
+            انت اخويا كده كده <br>
+            ❤️متزعلش منى ف كل اللى فات <br><br>
+
+            ❤️انت اخويا وصاحبى وخالى وكل حاجه <br><br>
+
+            ربنا يخليك ليا وميحرمنيش منك ابدا <br><br>
+
+            <strong>🤍يابختى بيك</strong><br><br>
+
+            🤍انا دايما جمبك وفى ضهرك متشلش هم حاجه
+        </p>
+
+        <p>🎵 For you Rady ❤️</p>
+
+        <audio id="myAudio" controls>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const audio = document.getElementById("myAudio");
+audio.volume = 1;
+audio.muted = false;
+</script>
+
+        <img src="images/photo1.jpg" alt="Our Photo">
+        <img src="images/photo2.jpg" alt="Our Photo">
+        <img src="images/photo3.jpg" alt="Our Photo">
+        <img src="images/photo4.jpg" alt="Our Photo">
+        <img src="images/photo5.jpg" alt="Our Photo">
+        <img src="images/photo6.jpg" alt="Our Photo">
+        <img src="images/photo7.jpg" alt="Our Photo">
+        <img src="images/photo8.jpg" alt="Our Photo">
+
+    </div>
+
+
+    <script>
+
+        function login() {
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            const correctUsername = "rady"
+            const correctPassword = "1021993"
+
+            if (username === correctUsername && password === correctPassword) {
+
+                document.getElementById("loginPage").style.display = "none";
+                document.getElementById("lovePage").style.display = "block";
+
+            } else {
+
+                document.getElementById("error").style.display = "block";
+
+            }
+        }
+
+    </script>
+
+</body>
+</html>
